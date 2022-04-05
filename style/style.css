@@ -15,7 +15,7 @@
 .container {
     padding: 0 15px;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 .main__title {
     margin-bottom: 50px;
@@ -32,7 +32,7 @@ input {
     border-radius: 8px;
     border: none;
 }
-sup {
+sup, sub {
     font-size: 20px;
 }
 .main__discriminant {
@@ -46,8 +46,40 @@ sup {
     margin: 0 auto 30px;
     border: 1px solid black;
     transition: all 0.3s linear;
+    background-color: #f8f8a6;
 }
 .btn:hover {
     cursor: pointer;
     background-color: #df2525;
+}
+@media (max-width:400px) {
+    input {
+        width: 50px;
+    }
+    .main__equation {
+        font-size: 20px;
+    }
+}
+@media (min-width:1000px){
+   * {
+        font-size: 40px;
+   }
+   .main__title {
+        margin-bottom: 80px;
+        font-size: 60px;
+    }
+    .btn {
+        font-size: 32px;
+        padding: 12px 35px;
+        margin: 0 auto 60px;
+    }
+    input {
+        width: 100px;
+    }
+    .main__equation {
+        margin-bottom: 80px;
+    }
+    sup, sub {
+        font-size: 28px;
+    }
 }
