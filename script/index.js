@@ -8,7 +8,7 @@ let result = 0;
 
 const btnMain = document.getElementById("btnMain");
 
-btnMain.addEventListener("click", function getDiscriminant() {
+function getDiscriminant() {
 
     if ((isNaN(+a.value)) || (isNaN(+b.value)) || (isNaN(+c.value))) {
         alert ('Данные должны быть числами. Проверьте введенные данные');
@@ -41,6 +41,12 @@ btnMain.addEventListener("click", function getDiscriminant() {
     } else {
         alert ('Решение не найдено. Дискриминант не может быть отрицательным')
     }
-}
-);
+};
 
+btnMain.addEventListener("click", getDiscriminant);
+
+window.addEventListener("keydown", (keyPressed) => {
+    if (keyPressed.key === 'Enter') {
+        getDiscriminant();
+    }
+});
