@@ -6,7 +6,6 @@ const x1 = document.getElementById("x1");
 const x2 = document.getElementById("x2");
 let result = 0;
 
-
 const btnMain = document.getElementById("btnMain");
 
 btnMain.addEventListener("click", function getDiscriminant() {
@@ -21,6 +20,9 @@ btnMain.addEventListener("click", function getDiscriminant() {
     }
     if (+b.value === 0) {
         b.value = 1;
+    }
+    if (+c.value === 0) {
+        c.value = 0;
     }
 
     result = b.value ** 2 - 4 * a.value * c.value;

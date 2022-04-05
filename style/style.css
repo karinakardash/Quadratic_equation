@@ -2,69 +2,52 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 24px;
+    text-align: center;
 }
-
 .body, html {
-    background: linear-gradient(45deg, rgb(83, 130, 221), rgb(172, 82, 182));
+    background: linear-gradient(45deg, #5382dd, #ac52b6);
 }
-
 .main {
     padding: 100px 0;
     height: 100vh;
 }
-
 .container {
     padding: 0 15px;
     margin: 0 auto;
     max-width: 1200px;
 }
-
 .main__title {
-    text-align: center;
     margin-bottom: 50px;
     font-size: 32px;
 }
-
 .main__equation {
-    text-align: center;
     margin-bottom: 30px;
 }
-
 input {
     padding: 5px;
     width: 70px;
     cursor: pointer;
     outline-color: black;
-    font-size: 24px;
     border-radius: 8px;
     border: none;
 }
-
-span, p {
-    font-size: 24px;
-    text-align: center;
-}
-
 sup {
     font-size: 20px;
 }
-
 .main__discriminant {
-    text-align: center;
     margin-bottom: 20px;
 }
-#discriminant {
-    font-size: 24px;
-}
-
 .btn {
     font-size: 22px;
     border-radius: 8px;
-    border:none;
     padding: 5px 15px;
     display: block;
-    margin: 0 auto;
-    cursor: pointer;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     border: 1px solid black;
+    transition: all 0.3s linear;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: #df2525;
 }
