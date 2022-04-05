@@ -10,30 +10,35 @@ let result = 0;
 const btnMain = document.getElementById("btnMain");
 
 btnMain.addEventListener("click", function getDiscriminant() {
-    if ((+a.value === 0 && +b.value === 0 && +c.value === 0)) {
-        discriminant.innerHTML = 0;
-        x1.innerHTML = 0;
-        x2.innerHTML = 0;
-    } else if (!(isNaN(+a.value)) && !(isNaN(+b.value)) && !(isNaN(+c.value))){
+
+    if ((isNaN(+a.value)) || (isNaN(+b.value)) || (isNaN(+c.value))) {
+        alert ('Данные должны быть числами. Проверьте введенные данные');
+        return
+    };
+
+    if (+a.value === 0) {
+        a.value = 1;
+    }
+    if (+b.value === 0) {
+        b.value = 1;
+    }
+
     result = b.value ** 2 - 4 * a.value * c.value;
     discriminant.innerHTML = result;
-    if (result > 0){
-        let solOne = (- b.value + Math.sqrt(result) ) / 2 * a.value;
-        let solTwo = (- b.value - Math.sqrt(result) ) / 2 * a.value;
+
+    if (result > 0) {
+        let solOne = (-b.value + Math.sqrt(result) ) / (2 * a.value);
+        let solTwo = (-b.value - Math.sqrt(result) ) / (2 * a.value);
         x1.innerHTML = solOne;
         x2.innerHTML = solTwo;
     } else if (result = 0) {
-        let solOne = - b / (2 * a.value);
+        let solOne = -b / (2 * a.value);
         let solTwo = solOne;
         x1.innerHTML = solOne;
         x2.innerHTML = solTwo;
-    }
-        else {
+    } else {
         alert ('Решение не найдено. Дискриминант не может быть отрицательным')
     }
-} else {
-    alert ('Данные должны быть числами. Проверьте введенные данные')
-}
 }
 );
 
